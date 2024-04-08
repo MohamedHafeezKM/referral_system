@@ -1,0 +1,38 @@
+
+-----------------1. Register a user-------------
+
+url:http://localhost:8000/api/register/
+method:post
+data: name, email, password,  optional->referral_user:id of another user should be passed
+authenication:nill
+
+
+
+
+--------------2. Generate Token for each Users----------
+url:http://localhost:8000/api/token/
+method:post
+data:username(username is same as email), password
+authenication:nill
+result: token 72adea500bae62011d61334f00d2f8f12e21f5fa
+
+
+
+--------------3. User details---------------
+url:http://localhost:8000/api/user/details/
+method:get
+data:nill
+authenication:Token authenication,(token 72adea500bae62011d61334f00d2f8f12e21f5fa)
+
+
+
+
+--------------4. User's referral list---------------
+url:http://localhost:8000/api/user/referrals/
+pagination url:http://localhost:8000/api/user/referrals/?page=1
+method:get
+data:nill
+authenication:Token authenication,(token 72adea500bae62011d61334f00d2f8f12e21f5fa)
+
+
+
